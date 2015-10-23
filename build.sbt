@@ -11,7 +11,7 @@ versionWithGit
 lazy val library =
   Project("library", file("gpg-library")).settings(
     name := "pgp-library",
-    libraryDependencies ++= Seq(bouncyCastlePgp, dispatchDependency, specs2 % "test", sbtIo % "test")
+    libraryDependencies ++= Seq(parserCombinators, bouncyCastlePgp, dispatchDependency, specs2 % "test", sbtIo % "test")
   )
 
 // The sbt plugin.
@@ -53,4 +53,4 @@ Release.settings
 // Disable publishing of root
 publish := ()
 
-publishLocal := ()
+//publishLocal := ()
